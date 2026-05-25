@@ -4,6 +4,7 @@ on: [push, pull_request]
 
 jobs:
   test:
+    if: github.repository_owner == 'myridiax'
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
