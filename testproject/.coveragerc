@@ -1,0 +1,12 @@
+[run]
+branch = True
+source =
+    captcha
+omit =
+    ../captcha/migrations/*
+    ../captcha/tests/*
+    ../captcha/management/*
+
+[report]
+precision = 2
+fail_under = 80.0
