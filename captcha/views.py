@@ -14,7 +14,7 @@ from django.http import Http404, HttpResponse
 
 from captcha.conf import settings
 from captcha.helpers import captcha_audio_url, captcha_image_url
-from captcha.models import CaptchaStore
+from captcha.storage import FileSystemCaptchaStore
 
 
 # Distance of the drawn text from the top of the captcha image
@@ -53,15 +53,15 @@ def add_noise(image):
 def captcha_image(request, key, scale=1):
     if scale == 2 and not settings.CAPTCHA_2X_IMAGE:
         raise Http404
-    try:
-        store = CaptchaStore.objects.get(hashkey=key)
-    except CaptchaStore.DoesNotExist:
+    
+    store_data = FileSystemCaptchaStore.get(key)
+    if not store_data:
         # HTTP 410 Gone status so that crawlers don't index these expired urls.
         return HttpResponse(status=410)
 
     random.seed(key)  # Do not generate different images for the same key
 
-    text = store.challenge
+    text = store_data["challenge"]
 
     if isinstance(settings.CAPTCHA_FONT_PATH, str):
         fontpath = settings.CAPTCHA_FONT_PATH
@@ -205,13 +205,12 @@ def captcha_image(request, key, scale=1):
 
 def captcha_audio(request, key):
     if settings.CAPTCHA_FLITE_PATH:
-        try:
-            store = CaptchaStore.objects.get(hashkey=key)
-        except CaptchaStore.DoesNotExist:
+        store_data = FileSystemCaptchaStore.get(key)
+        if not store_data:
             # HTTP 410 Gone status so that crawlers don't index these expired urls.
             return HttpResponse(status=410)
 
-        text = store.challenge
+        text = store_data["challenge"]
         if "captcha.helpers.math_challenge" == settings.CAPTCHA_CHALLENGE_FUNCT:
             text = text.replace("*", "times").replace("-", "minus").replace("+", "plus")
         else:
@@ -302,7 +301,7 @@ def captcha_refresh(request):
     if not request.headers.get("x-requested-with") == "XMLHttpRequest":
         raise Http404
 
-    new_key = CaptchaStore.pick()
+    new_key = FileSystemCaptchaStore.pick()
     to_json_response = {
         "key": new_key,
         "image_url": captcha_image_url(new_key),
