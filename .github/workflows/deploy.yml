@@ -32,7 +32,7 @@ jobs:
           export PATH="$HOME/.local/bin:$PATH"
           poetry add setuptools wheel twine build
           poetry run python -m build 
-          # poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
+          poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
      
 
 
