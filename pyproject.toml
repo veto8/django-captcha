@@ -11,10 +11,10 @@ authors = [
 ]
 description = "A Django CAPTCHA application with a file-based storage backend support"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3.10",
+    "License :: GNU General Public License v3 or later (GPLv3+)",
     "Operating System :: OS Independent",
 ]
 
@@ -23,5 +23,8 @@ Homepage = "https://github.com/myridia/django-file-captcha"
 Issues = "https://github.com/myridia/django-file-captcha/issues"
 
 
+
+[tool.poetry.dependencies]
+python = ">=3.10"
 
 

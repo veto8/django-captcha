@@ -1,0 +1,50 @@
+#how to deploy a xml action file for github https://myridia.com/dev_posts/view/3904
+name: Publish
+on:
+ push:
+    branches: ["main"]
+    
+jobs:
+  Tasks:
+    #runs-on: ubuntu-latest
+    runs-on: docker3    
+    steps:
+      - name: Install Poetry
+        run: |
+         # sudo apt-get update -y
+         pipx install poetry 
+         echo 'export PATH="$PATH:/$HOME/.local/bin/"' >> ~/.bashrc
+         pipx ensurepath 
+         pipx completions
+         
+      - name: Checkout
+        run:  |       
+          git clone 'https://github.com/myridia/django-file-captcha.git'
+
+      - name: Build
+        run: |
+          cd django-file-captcha          
+          export PATH="$HOME/.local/bin:$PATH"
+          poetry add  setuptools wheel twine build
+
+          #poetry -m build 
+        #pip install setuptools wheel twine build
+        #python -m build 
+        # echo KEY: '${TWINE_PASSWORD}'
+        # twine check dist/*
+        # twine upload --verbose --skip-existing dist/*
+
+
+      # - name: publish
+      # env:
+      #  TWINE_USERNAME: "__token__"
+      #  TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+      # run: |
+      #  ls 
+        # python -m pip install --upgrade pip
+        # pip install setuptools wheel twine build
+        # python -m build 
+        # echo KEY: '${TWINE_PASSWORD}'
+        # twine check dist/*
+        # twine upload --verbose --skip-existing dist/*
+        
