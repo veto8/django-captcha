@@ -33,7 +33,7 @@ jobs:
           poetry lock
           poetry install --only dev
           poetry run python -m build 
-          poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
+          # poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
      
 
 
