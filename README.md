@@ -328,7 +328,7 @@ Hard Forked from https://github.com/mbi/django-simple-captcha
 
 ## Extra Repository ##
 ```
- git remote add codeberg ssh://git@codeberg.org/myridia/django-file-capture 
+ git remote add codeberg ssh://git@codeberg.org/myridia/django-file-captcha
  git push codeberg -f
 
 ```
