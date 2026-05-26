@@ -1,5 +1,5 @@
 *********************
-Django Simple Captcha
+Django file Captcha
 *********************
 
 .. image:: https://github.com/mbi/django-simple-captcha/actions/workflows/test.yml/badge.svg
@@ -12,7 +12,7 @@ Django Simple Captcha
   :target: https://github.com/mbi/django-simple-captcha/blob/master/LICENSE
 
 
-Django Simple Captcha is an extremely simple, yet highly customizable Django application to add captcha images to any Django form.
+Django File Captcha is an extremely simple, yet highly customizable Django application to add captcha images to any Django form.
 
 .. image:: http://django-simple-captcha.readthedocs.io/en/latest/_images/captcha3.png
 
