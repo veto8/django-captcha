@@ -7,7 +7,9 @@ on:
 jobs:
   Tasks:
     #runs-on: ubuntu-latest
-    runs-on: docker3    
+    #runs-on: docker3
+    runs-on: ubuntu-latest
+    container: myridia/runner
     steps:
       - name: Install Poetry
         run: |
@@ -25,9 +27,8 @@ jobs:
         run: |
           cd django-file-captcha          
           export PATH="$HOME/.local/bin:$PATH"
-          poetry add  setuptools wheel twine build
-
-          #poetry -m build 
+          poetry add setuptools wheel twine build
+          poetry run python -m build 
         #pip install setuptools wheel twine build
         #python -m build 
         # echo KEY: '${TWINE_PASSWORD}'
