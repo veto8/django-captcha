@@ -1,4 +1,4 @@
-# Slovak translation of django-simple-captcha.
+# Slovak translation of django-file-captcha.
 # Copyright (C) 2013 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Pavol Otto <pavol.otto@nic.cz>, 2013.
@@ -6,7 +6,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: django-simple-captcha 0.3.7\n"
+"Project-Id-Version: django-file-captcha 0.3.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-15 17:16+0200\n"
 "PO-Revision-Date: 2013-10-15 17:16+0200\n"

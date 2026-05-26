@@ -10,7 +10,7 @@ recursive-include captcha/templates *
 recursive-include captcha/jinja2 *
 recursive-include testproject *
 recursive-include docs *
-exclude testproject/django-simple-captcha.db
+exclude testproject/django-file-captcha.db
 prune .tox
 prune docs/_build
 prune htmlcov

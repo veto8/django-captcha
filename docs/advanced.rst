@@ -123,7 +123,7 @@ If sox_ is installed and used via this settings, random brown noise is injected 
 Defaults to: ``None`` (no audio output)
 
 .. _appleorange1: https://github.com/appleorange1
-.. _shown: https://github.com/appleorange1/django-simple-captcha-cracker-poc
+.. _shown: https://github.com/appleorange1/django-file-captcha-cracker-poc
 .. _sox: http://sox.sourceforge.net/
 
 
@@ -172,7 +172,7 @@ Defaults to: False
 CAPTCHA_GET_FROM_POOL
 ---------------------
 
-By default, `django-simple-captcha` generates a new captcha when needed and stores it in the database. This occurs in a `HTTP GET request`, which may not be wished. This default behavior may also conflict with a load balanced infrastructure, where there is more than one database to read data from. If this setting is `True`, when a new captcha is needed, a random one will be just read from a pool of captchas saved previously in the database. In this case, the custom management command `captcha_create_pool` must be run regularly in intervals slightly shorter than `CAPTCHA_TIMEOUT`. A good value for `CAPTCHA_TIMEOUT` could be 1446 (24 hours and 6 minutes) when adding captchas to the pool every 24 hours, and setting `CAPTCHA_GET_FROM_POOL_TIMEOUT` (see below) to 5 minutes. This means that 6 minutes before the last captchas expires, new captchas will be created, and no captcha will be used whose expiration is less than 5 minutes. In this case, use a cronjob or similar to run `python manage.py captcha_create_pool` every 24 hours.
+By default, `django-file-captcha` generates a new captcha when needed and stores it in the database. This occurs in a `HTTP GET request`, which may not be wished. This default behavior may also conflict with a load balanced infrastructure, where there is more than one database to read data from. If this setting is `True`, when a new captcha is needed, a random one will be just read from a pool of captchas saved previously in the database. In this case, the custom management command `captcha_create_pool` must be run regularly in intervals slightly shorter than `CAPTCHA_TIMEOUT`. A good value for `CAPTCHA_TIMEOUT` could be 1446 (24 hours and 6 minutes) when adding captchas to the pool every 24 hours, and setting `CAPTCHA_GET_FROM_POOL_TIMEOUT` (see below) to 5 minutes. This means that 6 minutes before the last captchas expires, new captchas will be created, and no captcha will be used whose expiration is less than 5 minutes. In this case, use a cronjob or similar to run `python manage.py captcha_create_pool` every 24 hours.
 
 Defaults to: False
 
@@ -280,12 +280,12 @@ Classic captcha that picks four random chars. This is case insensitive. ::
     CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
 
 
-Simple Math
+File Math
 ------------
 
 .. image:: _static/math.png
 
-Another classic, that challenges the user to resolve a simple math challenge by randomly picking two numbers between one and nine, and a random operator among plus, minus, times. ::
+Another classic, that challenges the user to resolve a file math challenge by randomly picking two numbers between one and nine, and a random operator among plus, minus, times. ::
 
     CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
 

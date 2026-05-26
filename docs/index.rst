@@ -1,18 +1,18 @@
 *********************
-Django Simple Captcha
+Django File Captcha
 *********************
 
-.. image:: https://travis-ci.org/mbi/django-simple-captcha.png?branch=master
+.. image:: https://travis-ci.org/mbi/django-file-captcha.png?branch=master
 
-Django Simple Captcha is an extremely simple, yet highly customizable Django application to add captcha images to any Django form.
+Django File Captcha is a file Django application to add captcha images to any Django form.
 
 .. image:: _static/captcha3.png
 
 Features
 ++++++++
 
-* Very simple to setup and deploy, yet very configurable
-* Can use custom challenges (e.g. random chars, simple maths, dictionary word, ...)
+* Very file to setup and deploy, yet very configurable
+* Can use custom challenges (e.g. random chars, file maths, dictionary word, ...)
 * Custom generators, noise and filter functions alter the look of the generated image
 * Supports text-to-speech audio output of the challenge text, for improved accessibility
 * Ajax refresh

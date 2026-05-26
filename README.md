@@ -15,13 +15,13 @@ A Django CAPTCHA application with file-based storage backend support. This is an
 ### Via pip
 
 ```bash
-pip install django-simple-captcha
+poetry add django-file-captcha
 ```
 
 Or install from this repository:
 
 ```bash
-pip install git+https://github.com/myridia/django-captcha.git@feature/file-storage-backend
+poetry add git+https://github.com/myridia/django-file-captcha.git
 ```
 
 ### Dependencies
@@ -278,7 +278,7 @@ The CaptchaField automatically validates:
 |---------|------|------|
 | **File Storage** | Fast, scalable, cloud-ready | Requires file sync in distributed systems |
 | **Cache** | Very fast, volatile | Limited capacity, lost on restart |
-| **Database** | Persistent, simple | Slower, requires DB queries |
+| **Database** | Persistent, file | Slower, requires DB queries |
 
 ## Migration Guide
 
@@ -311,13 +311,25 @@ Contributions are welcome! Please:
 ## Support
 
 For issues, questions, or suggestions:
-- GitHub Issues: https://github.com/myridia/django-captcha/issues
-- Original Project: https://github.com/mbi/django-simple-captcha
+- GitHub Issues: https://github.com/myridia/django-file-captcha/issues
+- Original Project: https://github.com/myridia/django-file-captcha
 
 ## Changelog
 
 See [CHANGES](CHANGES) file for version history.
 
+## Credits
+
+Hard Forked from https://github.com/mbi/django-simple-captcha
 ---
 
 **Status**: File storage backend is production-ready. Start using it today for scalable CAPTCHA handling!
+
+
+## Extra Repository ##
+```
+ git remote add codeberg ssh://git@codeberg.org/myridia/django-file-captcha
+ git push codeberg -f
+
+```
+
