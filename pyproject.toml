@@ -29,11 +29,11 @@ Issues = "https://github.com/myridia/django-file-captcha/issues"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 
-[tool.poetry.dependencies]
-python = ">=3.10"
-django = "^5.0"
-pillow = "^11.0"
-django-ranged-response = "^0.2.0"
+#[tool.poetry.dependencies]
+#python = ">=3.10"
+#django = "^5.0"
+#pillow = "^11.0"
+#django-ranged-response = "^0.2.0"
 
 [tool.poetry.group.dev.dependencies]
 setuptools = "*"
