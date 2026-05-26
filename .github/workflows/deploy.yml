@@ -30,13 +30,11 @@ jobs:
         run: |
           cd django-file-captcha          
           export PATH="$HOME/.local/bin:$PATH"
+          poetry lock
           poetry install --only dev
           poetry run python -m build 
-          #poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
+          poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
      
-          #echo KEY: ${TWINE_PASSWORD}
-          #poetry run twine check dist/*
-          #poetry run twine upload --verbose --skip-existing dist/*
 
 
         
