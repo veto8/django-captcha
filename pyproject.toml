@@ -5,13 +5,18 @@ build-backend = "hatchling.build"
 
 [project]
 name = "django-file-captcha"
-version = "0.1.4"
+version = "0.1.5"
 authors = [
   { name="Myridia", email="info@myridia.com" },
 ]
 description = "A Django CAPTCHA application with a file-based storage backend support"
 readme = "README.md"
 requires-python = ">=3.10"
+dependencies = [
+    "django>=5.0",
+    "pillow>=11.0",
+    "django-ranged-response>=0.2.0",
+]
 classifiers = [
     "Programming Language :: Python :: 3.10",
     "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
