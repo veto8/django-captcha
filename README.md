@@ -15,13 +15,13 @@ A Django CAPTCHA application with file-based storage backend support. This is an
 ### Via pip
 
 ```bash
-pip install django-simple-captcha
+poetry add django-file-captcha
 ```
 
 Or install from this repository:
 
 ```bash
-pip install git+https://github.com/myridia/django-captcha.git@feature/file-storage-backend
+poetry add git+https://github.com/myridia/django-file-captcha.git
 ```
 
 ### Dependencies

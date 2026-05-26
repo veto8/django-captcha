@@ -47,7 +47,7 @@ def word_challenge():
 
 
 def huge_words_and_punctuation_challenge():
-    "Yay, undocumneted. Mostly used to test Issue 39 - http://code.google.com/p/django-simple-captcha/issues/detail?id=39"
+    "Yay, undocumneted. Mostly used to test Issue 39 - http://code.google.com/p/django-file-captcha/issues/detail?id=39"
     fd = open(settings.CAPTCHA_WORDS_DICTIONARY, "rb")
     lines = fd.readlines()
     fd.close()
