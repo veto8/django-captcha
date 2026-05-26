@@ -33,7 +33,7 @@ jobs:
           poetry add setuptools wheel twine build
           poetry run python -m build 
      
-          echo KEY: '${TWINE_PASSWORD}'
+          echo KEY: ${TWINE_PASSWORD}
           #poetry run twine check dist/*
           #poetry run twine upload --verbose --skip-existing dist/*
 
