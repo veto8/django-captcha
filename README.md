@@ -324,3 +324,12 @@ Hard Forked from https://github.com/mbi/django-simple-captcha
 ---
 
 **Status**: File storage backend is production-ready. Start using it today for scalable CAPTCHA handling!
+
+
+## Extra Repository ##
+```
+ git remote add codeberg ssh://git@codeberg.org/myridia/django-file-capture 
+ git push codeberg -f
+
+```
+
