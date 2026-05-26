@@ -31,7 +31,7 @@ jobs:
           cd django-file-captcha          
           export PATH="$HOME/.local/bin:$PATH"
           poetry add setuptools wheel twine build
-          poetry run python -m build 
+          poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
      
           echo KEY: ${TWINE_PASSWORD}
           #poetry run twine check dist/*
