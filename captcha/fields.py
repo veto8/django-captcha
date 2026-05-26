@@ -59,7 +59,7 @@ class BaseCaptchaTextInput(MultiWidget):
             reverse("captcha-image", args=("dummy",))
         except NoReverseMatch:
             raise ImproperlyConfigured(
-                "Make sure you've included captcha.urls as explained in the INSTALLATION section on http://readthedocs.org/docs/django-simple-captcha/en/latest/usage.html#installation"
+                "Make sure you've included captcha.urls as explained in the INSTALLATION section on http://readthedocs.org/docs/django-file-captcha/en/latest/usage.html#installation"
             )
 
         if settings.CAPTCHA_GET_FROM_POOL:

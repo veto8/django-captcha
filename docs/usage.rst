@@ -1,10 +1,10 @@
-Using django-simple-captcha
+Using django-file-captcha
 ===========================
 
 Installation
 +++++++++++++
 
-1. Install ``django-simple-captcha`` via pip_: ``pip install  django-simple-captcha``
+1. Install ``django-file-captcha`` via pip_: ``pip install  django-file-captcha``
 2. Add ``captcha`` to the ``INSTALLED_APPS`` in your ``settings.py``
 3. Run ``python manage.py migrate``
 4. Add an entry to your ``urls.py`` (import ``include`` from ``django.urls``)::
