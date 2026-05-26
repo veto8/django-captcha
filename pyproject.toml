@@ -1,3 +1,30 @@
+[build-system]
+requires = ["pillow","django"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "django-file-captcha"
+version = "0.1.2"
+authors = [
+  { name="Myridia", email="info@myridia.com" },
+]
+description = "A Django CAPTCHA application with a file-based storage backend support"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/myridia/django-file-captcha"
+Issues = "https://github.com/myridia/django-file-captcha/issues"
+
+
+
+
 [tool.isort]
 profile = "black"
 lines_after_imports = 2
