@@ -17,7 +17,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install setuptools wheel twine build
         python -m build 
-        echo KEY: '${TWINE_PASSWORD}'
-        twine check dist/*
-        twine upload --verbose --skip-existing dist/*
+        # echo KEY: '${TWINE_PASSWORD}'
+        # twine check dist/*
+        # twine upload --verbose --skip-existing dist/*
         
