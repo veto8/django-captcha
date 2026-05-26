@@ -12,7 +12,7 @@ PYTHON_VERSION = "%s.%s" % sys.version_info[:2]
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(PROJECT_PATH, "django-simple-captcha.db"),
+        "NAME": os.path.join(PROJECT_PATH, "django-file-captcha.db"),
     }
 }
 

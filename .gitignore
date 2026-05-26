@@ -4,7 +4,7 @@ build
 *.egg-info
 docs/_build/
 .venv*
-testproject/django-simple-captcha.db
+testproject/django-file-captcha.db
 testproject/.coverage
 testproject/coverage.xml
 testproject/htmlcov/

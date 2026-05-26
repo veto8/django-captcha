@@ -278,7 +278,7 @@ The CaptchaField automatically validates:
 |---------|------|------|
 | **File Storage** | Fast, scalable, cloud-ready | Requires file sync in distributed systems |
 | **Cache** | Very fast, volatile | Limited capacity, lost on restart |
-| **Database** | Persistent, simple | Slower, requires DB queries |
+| **Database** | Persistent, file | Slower, requires DB queries |
 
 ## Migration Guide
 
@@ -311,13 +311,16 @@ Contributions are welcome! Please:
 ## Support
 
 For issues, questions, or suggestions:
-- GitHub Issues: https://github.com/myridia/django-captcha/issues
-- Original Project: https://github.com/mbi/django-simple-captcha
+- GitHub Issues: https://github.com/myridia/django-file-captcha/issues
+- Original Project: https://github.com/myridia/django-file-captcha
 
 ## Changelog
 
 See [CHANGES](CHANGES) file for version history.
 
+## Credits
+
+Hard Forked from https://github.com/mbi/django-simple-captcha
 ---
 
 **Status**: File storage backend is production-ready. Start using it today for scalable CAPTCHA handling!
