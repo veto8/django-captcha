@@ -34,8 +34,8 @@ jobs:
           poetry run python -m build 
      
           echo KEY: '${TWINE_PASSWORD}'
-          poetry run twine check dist/*
-          poetry run twine upload --verbose --skip-existing dist/*
+          #poetry run twine check dist/*
+          #poetry run twine upload --verbose --skip-existing dist/*
 
 
         
