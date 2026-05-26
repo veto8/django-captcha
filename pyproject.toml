@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "django-file-captcha"
-version = "0.1.7"
+version = "0.1.8"
 authors = [
   { name="Myridia", email="info@myridia.com" },
 ]
@@ -29,16 +29,16 @@ Issues = "https://github.com/myridia/django-file-captcha/issues"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 
-#[tool.poetry.dependencies]
-#python = ">=3.10"
-#django = "^5.0"
-#pillow = "^11.0"
-#django-ranged-response = "^0.2.0"
+[tool.poetry.dependencies]
+python = ">=3.10"
+django = "^5.0"
+pillow = "^11.0"
+django-ranged-response = "^0.2.0"
 
-[tool.poetry.group.dev.dependencies]
-setuptools = "*"
-wheel = "*"
-twine = "*"
-build = "*"
+#[tool.poetry.group.dev.dependencies]
+#setuptools = "*"
+#wheel = "*"
+#twine = "*"
+#build = "*"
 
 
