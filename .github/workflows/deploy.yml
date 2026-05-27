@@ -32,6 +32,7 @@ jobs:
           export PATH="$HOME/.local/bin:$PATH"
           poetry add setuptools wheel twine build
           poetry run python -m build 
+          cp dist/django_file_captcha-0.1.8-py3-none-any.whl  django_file_captcha.whl
           tree 
           # poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
 
@@ -40,7 +41,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: 'dist/django_file_captcha-0.1.8-py3-none-any.whl'
+          file: 'django_file_captcha.whl'
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
