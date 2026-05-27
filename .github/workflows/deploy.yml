@@ -18,11 +18,13 @@ jobs:
   Tasks:
     runs-on: ubuntu-latest
     container: myridia/runner
+    permissions:
+      contents: write
     steps:
       - name: python 
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.13'
     
       - name: Install Poetry
         run: |
