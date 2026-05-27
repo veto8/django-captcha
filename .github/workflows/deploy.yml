@@ -44,12 +44,8 @@ jobs:
           export PATH="$HOME/.local/bin:$PATH"
           python3 -m pip install build hatchling
           python3 -m build 
-          # poetry add setuptools wheel build
-          # poetry run python -m build 
-          # poetry remove setuptools wheel build
           poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
-
-     
+ 
       - name: Release
         uses: svenstaro/upload-release-action@v2
         with:
