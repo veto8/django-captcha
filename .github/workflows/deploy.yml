@@ -16,8 +16,6 @@ permissions:
   
 jobs:
   Tasks:
-    #runs-on: ubuntu-latest
-    #runs-on: docker3
     runs-on: ubuntu-latest
     container: myridia/runner
     steps:
