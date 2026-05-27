@@ -32,8 +32,8 @@ jobs:
           export PATH="$HOME/.local/bin:$PATH"
           poetry add setuptools wheel twine build
           poetry run python -m build 
-          cp dist/django_file_captcha-0.1.8-py3-none-any.whl  django_file_captcha.whl
-          tree 
+          cp dist/django_file_captcha-0.1.8-py3-none-any.whl  ../django_file_captcha.whl
+           
           # poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
 
      
