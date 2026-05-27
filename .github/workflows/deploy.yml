@@ -21,12 +21,12 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: python 
+      - name: Python 
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
     
-      - name: Install Poetry
+      - name: Poetry
         run: |
          # sudo apt-get update -y
          pipx install poetry 
