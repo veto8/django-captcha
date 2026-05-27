@@ -40,6 +40,7 @@ jobs:
           export PATH="$HOME/.local/bin:$PATH"
           poetry add setuptools wheel build
           poetry run python -m build 
+          poetry remove setuptools wheel build
           poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
 
      
