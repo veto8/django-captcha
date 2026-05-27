@@ -51,7 +51,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: 'dist/*'
+          file: 'django-file-captcha/dist/*'
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
