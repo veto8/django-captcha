@@ -34,6 +34,7 @@ jobs:
           poetry run python -m build 
           tree 
           # poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
+
      
       - name: Release
         uses: svenstaro/upload-release-action@v2
