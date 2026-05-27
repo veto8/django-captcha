@@ -24,15 +24,16 @@ jobs:
           git clone 'https://github.com/myridia/django-file-captcha.git'
 
       - name: Build
-        env:
-          TWINE_USERNAME: "__token__"
-          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        #env:
+        #  TWINE_USERNAME: "__token__"
+        #  TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
         run: |
           cd django-file-captcha          
           export PATH="$HOME/.local/bin:$PATH"
           poetry add setuptools wheel twine build
           poetry run python -m build 
-          poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
+          tree 
+          # poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }} 
      
 
 
