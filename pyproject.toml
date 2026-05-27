@@ -1,10 +1,10 @@
 [build-system]
-requires = ["pillow","hatchling"]
+requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
 name = "django-file-captcha"
-version = "0.1.9"
+version = "0.1.10"
 authors = [
   { name="Myridia", email="info@myridia.com" },
 ]
