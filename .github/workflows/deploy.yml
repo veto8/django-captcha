@@ -42,8 +42,8 @@ jobs:
         run: |
           cd django-file-captcha          
           export PATH="$HOME/.local/bin:$PATH"
-          pip3 install build hatchling
-          python -m build 
+          python3 -m pip install build hatchling
+          python3 -m build 
           # poetry add setuptools wheel build
           # poetry run python -m build 
           # poetry remove setuptools wheel build
