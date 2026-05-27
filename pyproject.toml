@@ -35,10 +35,6 @@ django = "^5.0"
 pillow = "^11.0"
 django-ranged-response = "^0.2.0"
 
-#[tool.poetry.group.dev.dependencies]
-#setuptools = "*"
-#wheel = "*"
-#twine = "*"
-#build = "*"
+
 
 
