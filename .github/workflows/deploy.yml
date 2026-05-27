@@ -2,10 +2,18 @@
 name: Publish
 on:
   push:
+    branches: ["main"]
     tags:
-      - 'v*'
+      - '*'
+  workflow_dispatch:
+
 permissions:
- contents: write     
+  contents: write
+  pull-requests: write 
+  issues: read
+  packages: none
+
+  
 jobs:
   Tasks:
     #runs-on: ubuntu-latest
