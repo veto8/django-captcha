@@ -1,9 +1,11 @@
 #how to deploy a xml action file for github https://myridia.com/dev_posts/view/3904
 name: Publish
 on:
- push:
-    branches: ["main"]
-    
+  push:
+    tags:
+      - 'v*'
+permissions:
+ contents: write     
 jobs:
   Tasks:
     #runs-on: ubuntu-latest
