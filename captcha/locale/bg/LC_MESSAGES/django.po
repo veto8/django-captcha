@@ -1,11 +1,11 @@
-# django-file-captcha Bulgarian translation
+# django-simple-captcha Bulgarian translation
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the django-file-captcha package.
+# This file is distributed under the same license as the django-simple-captcha package.
 # Venelin Stoykov <vkstoykov@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: django-file-captcha 0.4.1\n"
+"Project-Id-Version: django-simple-captcha 0.4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-10 14:43+0200\n"
 "PO-Revision-Date: 2014-02-10 15:00+0200\n"
